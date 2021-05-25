@@ -2,9 +2,9 @@ import * as React from 'react';
 import {
     Route,
     Redirect,
-    RouteProps,
 } from 'react-router-dom';
 import {useAuth} from "../contexts/AuthContext";
+import {RouteProps} from "react-router";
 
 interface PrivateRouteProps extends RouteProps {
     // tslint:disable-next-line:no-any
@@ -19,7 +19,7 @@ const PrivateRoute = (props: PrivateRouteProps) => {
     return (
         <Route
             {...rest}
-            render={(routeProps) =>
+            render={(routeProps:any) =>
                 currentUser ? (
                     <Component {...routeProps} />
                 ) : (

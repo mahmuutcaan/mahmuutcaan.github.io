@@ -18,16 +18,14 @@ const App = () => {
             <div>
                 <Router>
                     <Switch>
-                        <PrivateRoute exact path={'/HomePage'} component={HomePage} />
-                     <Route path='/' exact component={Login} />
-                    <Route path='/Login' exact component={Login} />
-                    <Route path='/SignUp' exact component={SignUp} />
+                        <PrivateRoute path={'/HomePage'} exact component={HomePage} />
+                         <Route path='/' exact component={Login} />
+                           <Route path='/Login' exact component={Login} />
+                         <Route path='/SignUp' exact component={SignUp} />
                 <Route path='/HomePage' exact component={HomePage} />
                     </Switch>
                 </Router>
             </div>
-
-
       </AuthProvider>
   );
 };
