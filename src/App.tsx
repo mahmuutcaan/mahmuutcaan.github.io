@@ -12,7 +12,7 @@ import {AuthProvider} from "./contexts/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
 
 const App = () => {
-    const history = useHistory()
+    const history = useHistory();
   return (
       <AuthProvider>
             <div>

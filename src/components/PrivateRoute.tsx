@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
     Route,
     Redirect,
-} from 'react-router-dom';
+} from 'react-router';
 import {useAuth} from "../contexts/AuthContext";
 import {RouteProps} from "react-router";
 
