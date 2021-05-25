@@ -1,17 +1,22 @@
 import React from 'react';
-import SignUp from './SignUp';
-import Login from "./Login";
-import HomePage from "./HomePage/HomePage";
-import { Route,  useHistory, Switch, BrowserRouter} from 'react-router-dom'
-import {AuthProvider} from "../contexts/AuthContext";
-import PrivateRoute from "./PrivateRoute";
+import SignUp from './components/SignUp';
+import Login from "./components/Login";
+import HomePage from "./components/HomePage/HomePage";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    useHistory
+} from "react-router-dom";
+import {AuthProvider} from "./contexts/AuthContext";
+import PrivateRoute from "./components/PrivateRoute";
 
 const App = () => {
     const history = useHistory()
   return (
       <AuthProvider>
             <div>
-                <BrowserRouter>
+                <Router>
                     <Switch>
                         <PrivateRoute exact path={'/HomePage'} component={HomePage} />
                      <Route path='/' exact component={Login} />
@@ -19,7 +24,7 @@ const App = () => {
                     <Route path='/SignUp' exact component={SignUp} />
                 <Route path='/HomePage' exact component={HomePage} />
                     </Switch>
-                </BrowserRouter>
+                </Router>
             </div>
 
 
