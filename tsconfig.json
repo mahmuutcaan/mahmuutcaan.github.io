@@ -8,8 +8,7 @@
     ],
     "typeRoots": [
       "../node_modules/@types",
-      "../@types",
-      "alltypes.d.ts"
+      "../@types"
     ],
     "allowJs": true,
     "skipLibCheck": true,
