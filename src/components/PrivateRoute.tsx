@@ -2,14 +2,13 @@ import * as React from 'react';
 import {
     Route,
     Redirect,
-} from 'react-router';
+} from 'react-router-dom';
 import {useAuth} from "../contexts/AuthContext";
 import {RouteProps} from "react-router";
 
 interface PrivateRouteProps extends RouteProps {
     // tslint:disable-next-line:no-any
     component: any;
-
 }
 
 const PrivateRoute = (props: PrivateRouteProps) => {
