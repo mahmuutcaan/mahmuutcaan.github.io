@@ -2,7 +2,7 @@
   "name": "bee-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/Login",
+  "homepage": "",
   "dependencies": {
     "@kurpachsv/react-gallery": "^0.2.41",
     "@react-native-firebase/auth": "^12.0.0",
