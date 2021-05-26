@@ -3,7 +3,7 @@ import {useAuth} from "../contexts/AuthContext";
 import {Link,} from 'react-router-dom'
 import Logo from '../assets/yekaterinburg-metro-logo.png';
 import Flower from '../assets/lotus.png';
-import City from '../assets/brisbane-city-hall.png';
+import City from '../assets/city.png';
 import Nature from '../assets/leaf-black-natural-shape.png';
 import User from '../assets/user.png';
 import BeeLogo from '../assets/swarm.png'
@@ -43,10 +43,10 @@ const NavBar:React.FunctionComponent<props> = (user:any) => {
                    <Link onClick={() => categoryChange('cy')} style={{width:'33%',display:'flex',justifyContent:'center',}} to={'/HomePage'}  > <div style={{width:'33%',display:'flex',justifyContent:'center',}}><div><img src={City} style={{width:32,height:32}}/></div></div></Link>
                    <Link onClick={() => categoryChange('nature')} style={{width:'33%',display:'flex',justifyContent:'center',}} to={'/HomePage'}> <div style={{width:'33%',display:'flex',justifyContent:'center',}}><div><img src={Nature} style={{width:32,height:32}}/></div></div></Link>
                 </div>
-                <Link id={'Link'} style={{minWidth:'10%',color:'#BBBBBB' , display:'flex' ,justifyContent:'flex-end',paddingRight:20,}} to={'/HomePage'}>
+                <Link id={'Link'} to={'/About'} style={{minWidth:'10%',color:'#BBBBBB' , display:'flex' ,justifyContent:'flex-end',paddingRight:20,}} >
                 <div style={{display:'flex',flexDirection:'column',borderRadius:scrollY <= 50 ? 0 : 30 ,transition: scrollY <= 50 ? '1s' : '1s',justifyContent:'center',alignItems:'center',height:'100%'}}>
                     <img src={User} style={{width:32,height:32}}/>
-                    {scrollY <= 50 ?   <div style={{fontSize:15}}>{currentUser.email.split('@')[0]}</div> : null }
+                    {scrollY <= 50 ?   <div style={{fontSize:15 ,color:'black'}}>{currentUser.email.split('@')[0]}</div> : null }
 
                 </div>
                 </Link>

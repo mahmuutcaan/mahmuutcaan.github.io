@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import {AuthProvider} from "./contexts/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
+import AboutMePage from "./components/AboutMePage/AboutMePage";
 
 const App = () => {
     const history = useHistory();
@@ -19,10 +20,10 @@ const App = () => {
                 <Router>
                     <Switch>
                         <PrivateRoute path={'/HomePage'} exact component={HomePage} />
+                        <PrivateRoute path={'/About'} exact component={AboutMePage} />
                          <Route path='/' exact component={Login} />
                            <Route path='/Login' exact component={Login} />
                          <Route path='/SignUp' exact component={SignUp} />
-                <Route path='/HomePage' exact component={HomePage} />
                     </Switch>
                 </Router>
             </div>
